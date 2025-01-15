@@ -1,0 +1,165 @@
+{
+  "cookies": [
+    {
+      "name": "bcookie",
+      "value": "\"v=2&5b84bd21-1f4f-4c6d-8a40-f5a2e8d15c76\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1768487637,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_gc",
+      "value": "MTswOzE3MzY5NTE2Mzc7MjswMjEXkSGO/Hs6PSqEDpNIFt9k+Kg0vbTuLQok6ZHMoUsRaw==",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1752503637,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=VGST08:s=V:r=V:a=V:p=V:g=3094:u=1:x=1:i=1736951637:t=1737038037:v=2:sig=AQHtSreUd6QUWcAfmXNY_fkkG1wktRUW\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1737038037,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412",
+      "value": "871146902",
+      "domain": ".pardot.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412-hash",
+      "value": "567fd69e4c8ec094d1de2e96f219e631951fc8c687e9346ae8b7c288e806e7749cee53659d35d627d0e8752474d70fb2d1b8c1cc",
+      "domain": ".pardot.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lpv95412",
+      "value": "aHR0cHM6Ly93d3cuc29nZXRpLmNvbS8%3D",
+      "domain": "pi.pardot.com",
+      "path": "/",
+      "expires": 1736953440,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSessionUser_2566906",
+      "value": "eyJpZCI6IjI1ZGFhYjk5LTU0M2QtNTViZS04ZDA3LTY1YTU1NTZlMjUxYSIsImNyZWF0ZWQiOjE3MzY5NTE2Mzc5MTMsImV4aXN0aW5nIjp0cnVlfQ==",
+      "domain": ".sogeti.com",
+      "path": "/",
+      "expires": 1768487637,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSession_2566906",
+      "value": "eyJpZCI6IjM4NzBjN2EzLWExODEtNDU3NS1iMGE0LWQ5YjFhNGVhN2Q2MSIsImMiOjE3MzY5NTE2Mzc5MTUsInMiOjEsInIiOjEsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+      "domain": ".sogeti.com",
+      "path": "/",
+      "expires": 1736953437,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412",
+      "value": "871146902",
+      "domain": "www.sogeti.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412-hash",
+      "value": "567fd69e4c8ec094d1de2e96f219e631951fc8c687e9346ae8b7c288e806e7749cee53659d35d627d0e8752474d70fb2d1b8c1cc",
+      "domain": "www.sogeti.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "CookieConsent",
+      "value": "{stamp:%27AiTVFhZ5oqJ+Hbe35vPIPyoxxqlEdI1tgAYok0ob/kVslZOpWrqueg==%27%2Cnecessary:true%2Cpreferences:true%2Cstatistics:true%2Cmarketing:true%2Cmethod:%27explicit%27%2Cver:1%2Cutc:1736951645124%2Cregion:%27de%27}",
+      "domain": "www.sogeti.com",
+      "path": "/",
+      "expires": 1744727645,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.54992131.1736951645",
+      "domain": ".sogeti.com",
+      "path": "/",
+      "expires": 1744727645,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1048089095.1736951638",
+      "domain": ".sogeti.com",
+      "path": "/",
+      "expires": 1771511645,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_L63HB0BGGY",
+      "value": "GS1.1.1736951637.1.0.1736951645.60.0.0",
+      "domain": ".sogeti.com",
+      "path": "/",
+      "expires": 1771511645,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412",
+      "value": "871146902",
+      "domain": "go.capgeminigroup.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "visitor_id95412-hash",
+      "value": "567fd69e4c8ec094d1de2e96f219e631951fc8c687e9346ae8b7c288e806e7749cee53659d35d627d0e8752474d70fb2d1b8c1cc",
+      "domain": "go.capgeminigroup.com",
+      "path": "/",
+      "expires": 1768401240,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}

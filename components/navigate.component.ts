@@ -1,7 +1,8 @@
 import {Page,Locator,expect} from '@playwright/test'
 
-//Component to open specific Page via URL
-class Navigate{
+//Component class to open specific Page via URL
+class NavigateComp{
+
     //class properties
     page:Page;
     countrySelector: Locator;
@@ -28,7 +29,7 @@ class Navigate{
         await this.page.goto('https://www.sogeti.com/',{waitUntil:"load"});
 
         //Wait until loading is complete by waiting for country seletion listobject
-        await this.countrySelector.waitFor({ timeout: 10000 });
+        await this.countrySelector.waitFor({ timeout: 10000 ,state:"visible"});
     }
 
     //Open Service - Quality Engineering Page
@@ -49,25 +50,28 @@ class Navigate{
     //Select country given via parameter. 
     //The parameter contains the country as text which is merged into an a xpath to identify the object
     async selectCountry(country:string){
+
         //Create the xpath statement for the locator
         let xpathLocator = '//div[@class="header-lang header_lang_menu"]//span[@class="inner location-span" and contains(text(), "'+ country +'")]';
-        console.log(xpathLocator);
         
         //Open list of countrys 
         await this.openLandingPage();
-        //await this.page.waitForTimeout(3000);
+
         await this.countrySelector.click();
-        //await this.page.waitForTimeout(3000);
+        await this.page.waitForLoadState("load");
+
         //use xpath to identify and click the country given by the parameter
         await this.page.locator(xpathLocator).click();
-        //await expect(this.page.locator(xpathLocator)).
+
         await this.page.waitForLoadState("load");
     }
         
+    
     //Verify Funktions - Verify content of the navigation bar-------------------------------------------------------------------------------------------
 
     //Verify navigation links of the current page
     async verifyNavigationLinks(parentPage:string, currentPage:string){
+
         //Verify the link of the parent page
         await expect(this.parentPageLink).toHaveText(parentPage);
 
@@ -77,4 +81,4 @@ class Navigate{
 
 }
 
-export default Navigate
+export default NavigateComp
