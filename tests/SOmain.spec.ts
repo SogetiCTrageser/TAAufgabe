@@ -5,10 +5,13 @@ import FooterComp from '../components/footer.component'
 import ContactUsPage from '../pages/ContactUs.page'
 import { faker } from '@faker-js/faker'
 
+
+//Tests for the TA asignment
+//Test started at the Sogeti mainpage
 test.describe('TA Aufgaben', () => {
     
 
-    //Test Case 1: Loading the Service - Quality Engineering an verify the navigation links of the selected page
+    //Test Case 1: Loading the Service - Quality Engineering page an verify the navigation links of the selected page
     test('TC1: Open Service - Quality Engineering', async ({ page }) => {
         
         //Initialitz Navigate class
@@ -22,8 +25,9 @@ test.describe('TA Aufgaben', () => {
     })
     
 
-    //Test Case 2: Loading and fill out the "Contact Us"-form entering partial random data
+    //Test Case 2: Loading the "Contact Us"-page via Quality Engineering and entering partial random data into the form
     test('TC2: Verify Contact us page', async ({ page }) => {
+
         //Initialitz NavigateComp, FooterComp and ContactUsPage class
         const navigateComp= new NavigateComp(page);
         const footerComp= new FooterComp(page);
@@ -36,7 +40,7 @@ test.describe('TA Aufgaben', () => {
         await footerComp.openContactUsPage();
 
         //Enter partial random data into the contact form
-        await contactUsPage.inputContactDataRandomText
+        await contactUsPage.inputContactData
         (
             'Alumni',
             faker.person.firstName(),
@@ -50,7 +54,7 @@ test.describe('TA Aufgaben', () => {
             faker.lorem.paragraph()
         );
 
-        //Check the agreement checkbox
+        //Activate the agreement checkbox
         await contactUsPage.setAgreeCBox(true);
     })
 
@@ -58,13 +62,16 @@ test.describe('TA Aufgaben', () => {
     //Test Case 3: : Verify the links to the internal landingpage versions
     for (const countryData of CountryDataArray){
         test('TC3: Verify link to the landingpage versions of ' + countryData.country, async ({ page }) =>{
+
             //Initialitz Navigate class
             const navigateComp= new NavigateComp(page);
-
+            
+            //Open the country by clicking on his link
             console.log("Verify the link of",countryData.country);
             await navigateComp.selectCountry(countryData.country);
 
-            console.log("Expect URL ",countryData.url);
+            //Compare the current URL with URL of the selected country
+            console.log("Expect URL",countryData.url);
             await expect(page).toHaveURL(countryData.url);
 
         })

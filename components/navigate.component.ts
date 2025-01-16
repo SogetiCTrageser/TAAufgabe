@@ -1,6 +1,6 @@
 import {Page,Locator,expect} from '@playwright/test'
 
-//Component class to open specific Page via URL
+//Component class to open specific pages via URL
 class NavigateComp{
 
     //class properties
@@ -25,19 +25,21 @@ class NavigateComp{
 
     //Open the sogeti landingpage
     async openLandingPage(){
+
         //Open the URL of the sogeti website
         await this.page.goto('https://www.sogeti.com/',{waitUntil:"load"});
 
-        //Wait until loading is complete by waiting for country seletion listobject
+        //Wait until loading is completed by waiting for country seletion listobject
         await this.countrySelector.waitFor({ timeout: 10000 ,state:"visible"});
     }
 
-    //Open Service - Quality Engineering Page
+    //Open Service - Quality Engineering page
     async openQualityEngineeringPage(){
+
         //Open the Sogeti Landingpage
         await this.openLandingPage();
 
-        //Hover the Mouse over the Services button to open submenu
+        //Hover the Mouse over the Services button, to open submenu
         await this.serviceBtn.hover();
         await expect(this.qualityEngineeringBtn).toBeVisible({timeout:5000});
 
@@ -54,15 +56,17 @@ class NavigateComp{
         //Create the xpath statement for the locator
         let xpathLocator = '//div[@class="header-lang header_lang_menu"]//span[@class="inner location-span" and contains(text(), "'+ country +'")]';
         
-        //Open list of countrys 
+        //Open Sogeti landing page
         await this.openLandingPage();
 
+        //Open list of countrys 
         await this.countrySelector.click();
         await this.page.waitForLoadState("load");
 
-        //use xpath to identify and click the country given by the parameter
+        //Use xpath to identify and click the country given by the parameter
         await this.page.locator(xpathLocator).click();
 
+        //Wait until loading has been finished
         await this.page.waitForLoadState("load");
     }
         

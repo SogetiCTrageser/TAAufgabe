@@ -1,6 +1,6 @@
 import {Page,Locator} from '@playwright/test'
 
-//Component class to open control the footer of the sogeti pages
+//Component class to work with the footer of the Sogeti pages
 class FooterComp{
 
     //class properties
@@ -32,6 +32,7 @@ class FooterComp{
 
     //Set the focus of the browser on the Footer (Not needed because of autofokus, but was explizit requested in the requiement.)
     async fokusFooter(){
+        
         //Set the focus on the Footer
         await this.footer.scrollIntoViewIfNeeded();
     }

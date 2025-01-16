@@ -1,6 +1,6 @@
 import {Page,Locator, expect} from '@playwright/test'
 
-//Component class to open control the footer of the sogeti pages
+//Page class to work with the Contact Us page of Sogeti
 class ContactUsPage{
     //class properties
     page:Page;
@@ -35,8 +35,8 @@ class ContactUsPage{
 
     //Input Funktions - Entering data or interact with elements-------------------------------------------------------------------------------------------
  
-    //Fill all fields of the contact us form with valid data. All text and numbers are randomized
-    async inputContactDataRandomText(purpose:string, firstName:string,lastName:string,jobTitle:string, position:string,email:string,country:string, phone:string,company:string,message:string){     
+    //Fill all fields of the contact us form with valid data
+    async inputContactData(purpose:string, firstName:string,lastName:string,jobTitle:string, position:string,email:string,country:string, phone:string,company:string,message:string){     
         
         //Select purpose from the list
         await this.page.selectOption(this.purposeSlct,{value:purpose});
